@@ -1,6 +1,6 @@
 
 datagroup: adwords_etl_datagroup {
-  sql_trigger: SELECT COUNT(*) FROM `@{ADWORDS_SCHEMA}.account_hourly_stats` ;;
+  sql_trigger: SELECT COUNT(*) FROM `@{GOOGLE_ADS_SCHEMA}.account_hourly_stats` ;;
   max_cache_age: "24 hours"
 }
 
@@ -10,7 +10,7 @@ view: adwords_config {
 # Should remain hidden as it's not intended to be used as a column.
   dimension: adwords_schema {
     hidden: yes
-    sql:@{ADWORDS_SCHEMA};;
+    sql:@{GOOGLE_ADS_SCHEMA};;
   }
 }
 
